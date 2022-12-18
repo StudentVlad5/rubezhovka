@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/rubezhovka/static/css/main.5bb07489.css",
+    "main.js": "/rubezhovka/static/js/main.141adce7.js",
+    "index.html": "/rubezhovka/index.html",
+    "main.5bb07489.css.map": "/rubezhovka/static/css/main.5bb07489.css.map",
+    "main.141adce7.js.map": "/rubezhovka/static/js/main.141adce7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5bb07489.css",
+    "static/js/main.141adce7.js"
+  ]
+}

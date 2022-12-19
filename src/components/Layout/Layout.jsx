@@ -3,7 +3,7 @@ import {App} from "../App"
 
 export const Layout = () => {
     return (
-    <section>
+    <section style={{display:'flex'}}>
         <App/>
         <Outlet/>
     </section>

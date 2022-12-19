@@ -1,0 +1,15 @@
+.button {
+    list-style: none;
+    font-size: 18px;
+    padding: 5px;
+    width: 150px;
+    margin-left: 10px;
+    border-radius: 10px;
+}
+.NavContainer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

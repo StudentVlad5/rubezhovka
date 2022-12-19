@@ -7,25 +7,17 @@ import { Home } from './Home/Home';
 import { NotFound } from './NotFound/NotFound';
 export const App = () => {
   return (
-    <div
-      style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        flexWrap: 'wrap',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
+    <>
     <Routes>
-      <Route path='/' element={<Home/>}/>
+      <Route path='/' element={<Home/>}>
       <Route path='bus_way_shadule' element={<Navigation/>}>
         <Route path='339' element={<Filter339bus/>}/>
         <Route path='770' element={<Filter770bus/>}/>
       </Route>
+      </Route>
       <Route path='*' element={<NotFound/>}/>
     </Routes>
-    </div>
+    </>
     
   );
 };

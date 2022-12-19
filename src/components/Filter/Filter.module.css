@@ -1,0 +1,25 @@
+.sectionShaduleBus{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px;
+}
+select {
+    margin: 10px;
+    padding: 2px;
+}
+.labelTable {
+    font-size: 16px;
+    padding: 0 10px;
+}
+@media screen and (max-width: 319.9px) {
+    .labelTable{
+    font-size: 10px;
+    }
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    .labelTable{
+    font-size: 14px;
+    }
+}

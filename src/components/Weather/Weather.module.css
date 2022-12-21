@@ -1,0 +1,19 @@
+.table_weather,
+thead,
+td,
+th {
+    font-size: 12px;
+}
+.datetime {
+    font-size: 10px;
+}
+td,th{
+    width:100px;
+}
+td.description,
+th.description {
+    font-size: 10px;
+}
+svg{
+    width: 20px;
+}

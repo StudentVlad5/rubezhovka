@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import  { WeatherIcon } from "../Itemicon/Itemicon";
+import  css  from "./Weather.module.css";
 
 export const Weather = () =>{
 
@@ -6,10 +8,11 @@ export const Weather = () =>{
     
     const [status,setStatus] = useState('idle');
     const [currentDay, setCurrentDay] = useState('');
-    const [list, setList] = useState(JSON.parse(localStorage.getItem('list') ||[]));
+    const [list, setList] = useState([]);
 
-    useEffect(()=>{
+      useEffect(()=>{
         const date = new Date();
+        if(JSON.parse(localStorage.getItem('list')) !== '' && JSON.parse(localStorage.getItem('list')) !== undefined){setList(JSON.parse(localStorage.getItem('list')))};
         const dateAPI = date.getDate()+'.'+ (date.getMonth()+1) + '.' + date.getFullYear();
 async function dataWeather () {
     setStatus('pending');
@@ -28,40 +31,36 @@ async function dataWeather () {
 if(currentDay !== dateAPI) {dataWeather()}
 },[currentDay, status])
 
+
 if(status === 'resolved'){return (
-        <table>
-        <caption>Погода</caption>
+        <table className={css.table_weather}>
+        <caption>Прогноз погоди станом на {currentDay}</caption>
             <thead>
                 <tr>
                     <th>День</th>
                     <th>max t</th>
                     <th>min t</th>
                     <th>середня t</th>
-                    <th>max t по відчуттям</th>
-                    <th>min t по відчуттям</th>
-                    <th>середня t по відчуттям</th>
-                    <th>вологість</th>
+                    <th>t по від-чуттям</th>
+                    <th>волог-кість</th>
                     <th>вітер</th>
                     <th>тиск</th>
-                    <th>хмарність</th>
+                    <th>хмар-ність</th>
                     <th>видимість</th>
-                    <th>сонячність</th>
+                    <th>соняч-ність</th>
                     <th>світанок</th>
                     <th>захід сонця</th>
-                    <th>умови</th>
-                    <th>опис погоди</th>
+                    <th className={css.description}>опис погоди</th>
                     <th>іконка</th>
                 </tr>
             </thead>
             <tbody>
                 {list.days.map(item => 
                     <tr key={item.datetime}>
-                    <td>{item.datetime}</td>  
+                    <td className={css.datetime}>{item.datetime}</td>  
                     <td>{item.tempmax}</td>
                     <td>{item.tempmin}</td>
                     <td>{item.temp}</td>
-                    <td>{item.feelslikemax}</td>
-                    <td>{item.feelslikemin}</td>
                     <td>{item.feelslike}</td>
                     <td>{item.humidity}</td>
                     <td>{item.windspeed}</td>
@@ -71,9 +70,8 @@ if(status === 'resolved'){return (
                     <td>{item.solarenergy}</td>
                     <td>{item.sunrise}</td>
                     <td>{item.sunset}</td>
-                    <td>{item.conditions}</td>
-                    <td>{item.description}</td>
-                    <td>{item.icon}</td>
+                    <td className={css.description}>{item.description}</td>
+                    <td>{<WeatherIcon perem={item.icon}/>}</td>
                     </tr>)}
             </tbody>
         </table>)

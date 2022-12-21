@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/rubezhovka/static/css/main.30510a61.css",
-    "main.js": "/rubezhovka/static/js/main.c6356338.js",
+    "main.js": "/rubezhovka/static/js/main.76a8abcb.js",
     "index.html": "/rubezhovka/index.html",
     "main.30510a61.css.map": "/rubezhovka/static/css/main.30510a61.css.map",
-    "main.c6356338.js.map": "/rubezhovka/static/js/main.c6356338.js.map"
+    "main.76a8abcb.js.map": "/rubezhovka/static/js/main.76a8abcb.js.map"
   },
   "entrypoints": [
     "static/css/main.30510a61.css",
-    "static/js/main.c6356338.js"
+    "static/js/main.76a8abcb.js"
   ]
 }

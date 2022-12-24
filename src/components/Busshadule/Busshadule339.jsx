@@ -7,19 +7,19 @@ export const Busshadule339 = ({day,startOfWay}) => {
         if(startOfWay !== ''){arrayOfSearch = arrayOfSearch.filter((item) => item.from === startOfWay)};
    
     return (
-        <table className={css.table}>
-            <caption className={css.caption}>Розклад руху маршрутного автобусу №339</caption>
-            <thead>
-                <tr>
+        <table className={css.busshadule__table}>
+            <caption className={css.busshadule__caption}>Розклад руху маршрутного автобусу №339</caption>
+            <thead className={css.busshadule__thead}>
+                <tr className={css.busshadule__tr}>
                     <th>День тижня</th>
                     <th>Початок маршруту</th>
                     <th>Маршрут</th>
                     <th>Час</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody className={css.busshadule__tbody}>
             {arrayOfSearch.map(item => 
-                <tr key={item.id}>
+                <tr className={css.busshadule__tr} key={item.id}>
                     <td>{item.date}</td>
                     <td>{item.from}</td>
                     <td>{item.location}</td>

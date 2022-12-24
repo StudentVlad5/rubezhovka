@@ -21,6 +21,7 @@ import {ReactComponent as ShowersDay} from "../../img/showers-day.svg";
 import {ReactComponent as ShowersNight} from "../../img/showers-night.svg";
 import {ReactComponent as Sleet} from "../../img/sleet.svg";
 import {ReactComponent as Snow} from "../../img/snow.svg";
+import {ReactComponent as Fog} from "../../img/fog.svg";
 
 export const WeatherIcon = ({perem}) =>{
     switch(perem){
@@ -45,6 +46,7 @@ export const WeatherIcon = ({perem}) =>{
         case "showers-night": return <ShowersNight/>;
         case "sleet": return <Sleet/>;
         case "snow": return <Snow/>;
+        case "fog": return <Fog/>;
         default:
             return perem;
         }

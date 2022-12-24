@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import  { WeatherIcon } from "../Itemicon/Itemicon";
+import { WeatherHourForecast } from "../WeatherHourForecast/WeatherHourForecast";
 import  css  from "./Weather.module.css";
 
 export const Weather = () =>{
@@ -9,11 +10,15 @@ export const Weather = () =>{
     const [status,setStatus] = useState('idle');
     const [currentDay, setCurrentDay] = useState('');
     const [list, setList] = useState([]);
+    const [daySet, setDaySet] = useState('');
+    const [listOfHours, setListOfHours] = useState([]);
 
       useEffect(()=>{
         const date = new Date();
         if(JSON.parse(localStorage.getItem('list')) !== '' && JSON.parse(localStorage.getItem('list')) !== undefined){setList(JSON.parse(localStorage.getItem('list')))};
         const dateAPI = date.getDate()+'.'+ (date.getMonth()+1) + '.' + date.getFullYear();
+
+
 async function dataWeather () {
     setStatus('pending');
     await fetch(API_WEATHER).then(res=>{if(res.ok) {return res.json()} 
@@ -31,23 +36,30 @@ async function dataWeather () {
 if(currentDay !== dateAPI) {dataWeather()}
 },[currentDay, status])
 
+function openModalWindow (e, item) {
+    e.preventDefault();
+    document.querySelector('#popup-root').classList.remove('is-hide');
+    setDaySet(e.currentTarget.dataset.setday);
+    setListOfHours(item.map(item=>item))
+    console.log(daySet, listOfHours);
+} 
 
-if(status === 'resolved'){return (
+if(status === 'resolved'){return (<>
         <table className={css.table_weather}>
-        <caption>Прогноз погоди станом на {currentDay}</caption>
-            <thead>
-                <tr>
-                    <th>День</th>
-                    <th>max t</th>
-                    <th>min t</th>
-                    <th>середня t</th>
-                    <th>t по від-чуттям</th>
-                    <th>волог-кість</th>
-                    <th>вітер</th>
-                    <th>тиск</th>
-                    <th>хмар-ність</th>
-                    <th>видимість</th>
-                    <th>соняч-ність</th>
+        <caption className={css.title_weather}>Прогноз погоди від {currentDay} на 15 днів</caption>
+            <thead className={css.table_thead}>
+                <tr className={css.table_tr}>
+                    <th>Дата</th>
+                    <th>max t°</th>
+                    <th>min t°</th>
+                    <th>середня t°</th>
+                    <th>t° по від-чуттям</th>
+                    <th>волог-кість, %</th>
+                    <th>вітер, км/год</th>
+                    <th>тиск, мм рт.ст.</th>
+                    <th>хмар-ність, %</th>
+                    <th>видимість, %</th>
+                    <th>соняч-ність, ЕДж</th>
                     <th>світанок</th>
                     <th>захід сонця</th>
                     <th className={css.description}>опис погоди</th>
@@ -56,17 +68,17 @@ if(status === 'resolved'){return (
             </thead>
             <tbody>
                 {list.days.map(item => 
-                    <tr key={item.datetime}>
-                    <td className={css.datetime}>{item.datetime}</td>  
+                    <tr className={css.tr_weather} key={item.datetime} onClick={(e)=>openModalWindow(e, item.hours)} data-setday={item.datetime}>
+                    <td className={css.datetime}>{item.datetime.slice(-2)+item.datetime.slice(4,8)+item.datetime.slice(0,4)}</td>  
                     <td>{item.tempmax}</td>
                     <td>{item.tempmin}</td>
                     <td>{item.temp}</td>
                     <td>{item.feelslike}</td>
-                    <td>{item.humidity}</td>
+                    <td>{Math.round(item.humidity,0)}</td>
                     <td>{item.windspeed}</td>
-                    <td>{item.pressure}</td>
-                    <td>{item.cloudcover}</td>
-                    <td>{item.visibility}</td>
+                    <td>{Math.round(item.pressure,0)}</td>
+                    <td>{Math.round(item.cloudcover,0)}</td>
+                    <td>{Math.round(item.visibility,0)}</td>
                     <td>{item.solarenergy}</td>
                     <td>{item.sunrise}</td>
                     <td>{item.sunset}</td>
@@ -74,6 +86,9 @@ if(status === 'resolved'){return (
                     <td>{<WeatherIcon perem={item.icon}/>}</td>
                     </tr>)}
             </tbody>
-        </table>)
+        </table>
+        <WeatherHourForecast data={listOfHours} forecastDate = {daySet}/>
+        </>
+        )
 }}
 

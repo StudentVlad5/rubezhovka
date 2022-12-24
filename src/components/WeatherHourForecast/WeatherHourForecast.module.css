@@ -1,0 +1,46 @@
+.dayForecast__table{
+    background-color: white;
+    border-bottom: 2px solid rgb(30, 29, 29);
+    border-radius: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    z-index: 100;
+    padding: 15px;
+}
+.backDrop{
+    width: 100%;
+    height: 100%;
+}
+.title__Caption {
+    color: white;
+    font-size: 25px;
+    font-weight: 500;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-bottom: 10px;
+}
+.dayForecast__table th {
+    min-width: 50px;
+}
+.dayForecast__table,
+.dayForecast__thead,
+.dayForecast__tr,
+.dayForecast__tr td {
+    font-size: 10px;
+    font-weight: 500;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.dayForecast__thead{
+    column-gap: 5px;
+}
+.dayForecast__tr:nth-child(even) {
+    background-color: #6e7070;
+    color: white;
+  }
+.dayForecast__tr td {
+    text-align: center;
+    border: 1px solid grey;
+}

@@ -20,7 +20,9 @@ export const Weather = () =>{
 async function dataWeather () {
     setStatus('pending');
     const API_WEATHER = 'https:weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/50.499578%2C%2030.126108?unitGroup=metric&key=KR6SBLEYUNUF9LCRX4YDHJT7K&contentType=json';
-    await fetch(API_WEATHER).then(res=>{if(res.ok) {return res.json()} 
+    await fetch(API_WEATHER, {
+        credentials: 'omit'
+        }).then(res=>{if(res.ok) {return res.json()} 
     return Promise.reject(new Error(`Can't find anything`))})
     .then(key => {console.log(key);
         localStorage.setItem('list', (JSON.stringify(key)))

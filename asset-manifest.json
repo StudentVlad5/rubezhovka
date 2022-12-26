@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/rubezhovka/static/css/main.6af744c8.css",
-    "main.js": "/rubezhovka/static/js/main.7b1c2ba8.js",
+    "main.css": "/rubezhovka/static/css/main.6d1b2179.css",
+    "main.js": "/rubezhovka/static/js/main.58bfa0ff.js",
     "static/media/snow-showers-day.svg": "/rubezhovka/static/media/snow-showers-day.d219b72d17e17cbce417bd5597646d04.svg",
     "static/media/snow-showers-night.svg": "/rubezhovka/static/media/snow-showers-night.732a57002dce98fe396f426802733add.svg",
     "static/media/rain-snow-showers-day.svg": "/rubezhovka/static/media/rain-snow-showers-day.b9734e205daec1628c2b6a0915c5a4b0.svg",
@@ -18,17 +18,18 @@
     "static/media/rain.svg": "/rubezhovka/static/media/rain.1f3928ecc65fd5c7c058b1ba23f8d85d.svg",
     "static/media/thunder-rain.svg": "/rubezhovka/static/media/thunder-rain.2e9ae693dee5fdda6831cb94d16f0608.svg",
     "static/media/clear-day.svg": "/rubezhovka/static/media/clear-day.41dfabd0c7568b07d40006eb5383b227.svg",
+    "static/media/fog.svg": "/rubezhovka/static/media/fog.cdb34500c878ffef039ce53cb2c6b1df.svg",
     "static/media/partly-cloudy-night.svg": "/rubezhovka/static/media/partly-cloudy-night.173fae26cc0bdb5b2eed109b5d3f56ae.svg",
     "static/media/wind.svg": "/rubezhovka/static/media/wind.5195e076b638f307f8947496c7043d5d.svg",
     "static/media/thunder.svg": "/rubezhovka/static/media/thunder.1f9fd4d2ee82c4c1e58c4c6a9895bd9c.svg",
-    "static/media/cloudy.svg": "/rubezhovka/static/media/cloudy.9f58273146466ca7034fbb64aae16c2e.svg",
     "index.html": "/rubezhovka/index.html",
+    "static/media/cloudy.svg": "/rubezhovka/static/media/cloudy.9f58273146466ca7034fbb64aae16c2e.svg",
     "static/media/clear-night.svg": "/rubezhovka/static/media/clear-night.915669c60fdc91ebc9dc246edebe046d.svg",
-    "main.6af744c8.css.map": "/rubezhovka/static/css/main.6af744c8.css.map",
-    "main.7b1c2ba8.js.map": "/rubezhovka/static/js/main.7b1c2ba8.js.map"
+    "main.6d1b2179.css.map": "/rubezhovka/static/css/main.6d1b2179.css.map",
+    "main.58bfa0ff.js.map": "/rubezhovka/static/js/main.58bfa0ff.js.map"
   },
   "entrypoints": [
-    "static/css/main.6af744c8.css",
-    "static/js/main.7b1c2ba8.js"
+    "static/css/main.6d1b2179.css",
+    "static/js/main.58bfa0ff.js"
   ]
 }

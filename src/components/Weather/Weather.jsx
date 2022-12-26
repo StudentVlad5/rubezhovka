@@ -5,8 +5,6 @@ import  css  from "./Weather.module.css";
 
 export const Weather = () =>{
 
-    const API_WEATHER = 'https:weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/50.499578%2C%2030.126108?unitGroup=metric&key=KR6SBLEYUNUF9LCRX4YDHJT7K&contentType=json';
-    
     const [status,setStatus] = useState('idle');
     const [currentDay, setCurrentDay] = useState('');
     const [list, setList] = useState([]);
@@ -21,6 +19,7 @@ export const Weather = () =>{
 
 async function dataWeather () {
     setStatus('pending');
+    const API_WEATHER = 'https:weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/50.499578%2C%2030.126108?unitGroup=metric&key=KR6SBLEYUNUF9LCRX4YDHJT7K&contentType=json';
     await fetch(API_WEATHER).then(res=>{if(res.ok) {return res.json()} 
     return Promise.reject(new Error(`Can't find anything`))})
     .then(key => {console.log(key);

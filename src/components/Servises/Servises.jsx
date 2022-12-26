@@ -6,7 +6,7 @@ export const Servises = () => {
     const[searchServises,setSearchServises] = useState('');
     const[searchServisesDetails,setSearchServisesDetails] = useState('');
     const[searchPlace,setSearchPlace] = useState('');
- 
+  
 
     let listOfServises = [];
     let listOfServisesDetail = [];

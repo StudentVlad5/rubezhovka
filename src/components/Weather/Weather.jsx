@@ -11,7 +11,7 @@ export const Weather = () =>{
     const [daySet, setDaySet] = useState('');
     const [listOfHours, setListOfHours] = useState([]);
 
-    const API_WEATHER = 'https:weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/50.499578%2C%2030.126108?unitGroup=metric&key=KR6SBLEYUNUF9LCRX4YDHJT7K&contentType=json';
+    const API_WEATHER = 'https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/50.499578%2C%2030.126108?unitGroup=metric&key=KR6SBLEYUNUF9LCRX4YDHJT7K&contentType=json';
 
       useEffect(()=>{
         const date = new Date();

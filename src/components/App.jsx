@@ -1,12 +1,12 @@
-
 import {Routes, Route} from 'react-router-dom';
 import { Filter339bus } from "./Filter/Filter339bus";
 import { Filter770bus } from "./Filter/Filter770bus";
 import { Navigation } from './Navigation/Navigation';
 import { Weather } from './Weather/Weather';
 import { Home } from './Home/Home';
-import { NotFound } from './NotFound/NotFound';
+import { Servises } from './Servises/Servises';
 import { Goods } from './Goods/Goods';
+import { NotFound } from './NotFound/NotFound';
 export const App = () => {
   return (
     <>
@@ -18,6 +18,7 @@ export const App = () => {
       </Route>
       <Route path='weather' element={<Weather/>}/>
       <Route path='goods' element={<Goods/>}/>
+      <Route path='Servises' element={<Servises/>}/>
       </Route>
       <Route path='*' element={<NotFound/>}/>
     </Routes>

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import goods from '../../json/goods.json';
-import css from './goods.module.css';
+import css from './Goods.module.css';
 
 export const Goods = () => {
     const[searchGoods,setSearchGoods] = useState('');
@@ -34,20 +34,20 @@ export const Goods = () => {
     return (
         <section>
                 <section className={css.section__goods}>
-                    <div className={css.select__container}>
-                        <label className={css.labelTable}>Обрати послугу,товар
+                    <div className={css.select__container__goods}>
+                        <label className={css.labelTable_goods}>Обрати послугу,товар
                             <select name="goods_name" id="goods_name" onChange={(e)=>setSearchGoods(e.target.value)}>
                             <option value="">-Вeсь перелік-</option>
                             {listOfGoodsUniq.map(item => <option value={item} key={item}>{item}</option>)}
                             </select>
                         </label>
-                        <label className={css.labelTable}>Назва продукту
+                        <label className={css.labelTable_goods}>Назва продукту
                             <select name="goods_name" id="goods_name" onChange={(e)=>setSearchGoodsDetails(e.target.value)}>
                             <option value="">-Вeсь перелік-</option>
                             {listOfGoodsDetailsUniq.map(item => <option value={item} key={item}>{item}</option>)}
                             </select>
                         </label>
-                        <label className={css.labelTable}>Локація
+                        <label className={css.labelTable_goods}>Локація
                             <select name="goods_name" id="goods_name" onChange={(e)=>setSearchPlace(e.target.value)}>
                             <option value="">-Вeсь перелік-</option>
                             {listOfPlaceUniq.map(item => <option value={item} key={item}>{item}</option>)}
@@ -55,11 +55,11 @@ export const Goods = () => {
                         </label>
                     </div>
                 </section>
-            <section>
+            <section className={css.select__container__goods}>
             <table className={css.table_goods}>
                 <caption className={css.title_goods}>Перелік місцевих послуг/товарів </caption>
-                <thead className={css.goods_thead}>
-                    <tr className={css.goods_tr}>
+                <thead className={css.thead_goods}>
+                    <tr className={css.tr_goods}>
                         <th>Товар</th>
                         <th>Опис</th>
                         <th>Контакти</th>
@@ -69,7 +69,7 @@ export const Goods = () => {
                 </thead>
                 <tbody>
                     {copyGoods.map(item => 
-                        <tr className={css.goods_tr} key={item.id}>
+                        <tr className={css.tr_goods} key={item.id}>
                             <td>{item.tools}</td>
                             <td>{item.tools_detail}</td>
                             <td>{item.name}</td>

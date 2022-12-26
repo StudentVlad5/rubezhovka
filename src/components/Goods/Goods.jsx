@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import goods from '../../json/goods.json';
-import css from './Goods.module.css';
+import css from './Goodsa.module.css';
 
 export const Goods = () => {
     const[searchGoods,setSearchGoods] = useState('');

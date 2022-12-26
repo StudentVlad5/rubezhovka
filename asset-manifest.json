@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/rubezhovka/static/css/main.495e5a84.css",
-    "main.js": "/rubezhovka/static/js/main.e714e1f5.js",
+    "main.js": "/rubezhovka/static/js/main.f773e724.js",
     "static/media/snow-showers-day.svg": "/rubezhovka/static/media/snow-showers-day.d219b72d17e17cbce417bd5597646d04.svg",
     "static/media/snow-showers-night.svg": "/rubezhovka/static/media/snow-showers-night.732a57002dce98fe396f426802733add.svg",
     "static/media/rain-snow-showers-day.svg": "/rubezhovka/static/media/rain-snow-showers-day.b9734e205daec1628c2b6a0915c5a4b0.svg",
@@ -26,10 +26,10 @@
     "static/media/cloudy.svg": "/rubezhovka/static/media/cloudy.9f58273146466ca7034fbb64aae16c2e.svg",
     "static/media/clear-night.svg": "/rubezhovka/static/media/clear-night.915669c60fdc91ebc9dc246edebe046d.svg",
     "main.495e5a84.css.map": "/rubezhovka/static/css/main.495e5a84.css.map",
-    "main.e714e1f5.js.map": "/rubezhovka/static/js/main.e714e1f5.js.map"
+    "main.f773e724.js.map": "/rubezhovka/static/js/main.f773e724.js.map"
   },
   "entrypoints": [
     "static/css/main.495e5a84.css",
-    "static/js/main.e714e1f5.js"
+    "static/js/main.f773e724.js"
   ]
 }

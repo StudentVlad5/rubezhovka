@@ -1,6 +1,7 @@
 .sectionShaduleBus{
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 10px 10px;
@@ -22,4 +23,8 @@ select {
     .labelTable{
     font-size: 14px;
     }
+}
+.select__container{
+    display: flex;
+    justify-content: center;
 }

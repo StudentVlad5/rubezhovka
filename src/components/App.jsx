@@ -6,6 +6,7 @@ import { Navigation } from './Navigation/Navigation';
 import { Weather } from './Weather/Weather';
 import { Home } from './Home/Home';
 import { NotFound } from './NotFound/NotFound';
+import { Goods } from './Goods/Goods';
 export const App = () => {
   return (
     <>
@@ -16,6 +17,7 @@ export const App = () => {
         <Route path='770' element={<Filter770bus/>}/>
       </Route>
       <Route path='weather' element={<Weather/>}/>
+      <Route path='goods' element={<Goods/>}/>
       </Route>
       <Route path='*' element={<NotFound/>}/>
     </Routes>

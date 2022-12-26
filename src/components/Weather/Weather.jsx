@@ -11,17 +11,16 @@ export const Weather = () =>{
     const [daySet, setDaySet] = useState('');
     const [listOfHours, setListOfHours] = useState([]);
 
+    const API_WEATHER = 'https:weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/50.499578%2C%2030.126108?unitGroup=metric&key=KR6SBLEYUNUF9LCRX4YDHJT7K&contentType=json';
+
       useEffect(()=>{
         const date = new Date();
         if(JSON.parse(localStorage.getItem('list')) !== '' && JSON.parse(localStorage.getItem('list')) !== undefined){setList(JSON.parse(localStorage.getItem('list')))};
         const dateAPI = date.getDate()+'.'+ (date.getMonth()+1) + '.' + date.getFullYear();
 
-
 async function dataWeather () {
     setStatus('pending');
-    const API_WEATHER = 'https:weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/50.499578%2C%2030.126108?unitGroup=metric&key=KR6SBLEYUNUF9LCRX4YDHJT7K&contentType=json';
     await fetch(API_WEATHER, {
-        credentials: 'omit',
         referrer: ""
         }).then(res=>{if(res.ok) {return res.json()} 
     return Promise.reject(new Error(`Can't find anything`))})

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import servises from '../../json/servises.json';
+import servises from 'json/servises.json';
 import css from './Servises.module.css';
 
 export const Servises = () => {
@@ -55,7 +55,7 @@ export const Servises = () => {
                         </label>
                     </div>
                 </section>
-            <section className={css.select__container__servises}>
+            <section className={css.select__container}>
             <table className={css.table_servises}>
                 <caption className={css.title_servises}>Перелік місцевих послуг/товарів </caption>
                 <thead className={css.thead_servises}>

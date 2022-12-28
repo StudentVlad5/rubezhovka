@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import  { WeatherIcon } from "../Itemicon/Itemicon";
-import { WeatherHourForecast } from "../WeatherHourForecast/WeatherHourForecast";
+import  { WeatherIcon } from "components/Itemicon/Itemicon";
+import { WeatherHourForecast } from "components/WeatherHourForecast/WeatherHourForecast";
 import  css  from "./Weather.module.css";
 
 export const Weather = () =>{
@@ -24,7 +24,7 @@ async function dataWeather () {
         referrer: ""
         }).then(res=>{if(res.ok) {return res.json()} 
     return Promise.reject(new Error(`Can't find anything`))})
-    .then(key => {console.log(key);
+    .then(key => {
         localStorage.setItem('list', (JSON.stringify(key)))
         setList(key);
         setCurrentDay(dateAPI);
@@ -45,11 +45,11 @@ function openModalWindow (e, item) {
     console.log(daySet, listOfHours);
 } 
 
-if(status === 'resolved'){return (<>
+if(status === 'resolved'){return (<div className={css.section__Weather}>
         <table className={css.table_weather}>
         <caption className={css.title_weather}>Прогноз погоди від {currentDay} на 15 днів</caption>
-            <thead className={css.table_thead}>
-                <tr className={css.table_tr}>
+            <thead className={css.thead_weather}>
+                <tr className={css.tr_weather}>
                     <th>Дата</th>
                     <th>max t°</th>
                     <th>min t°</th>
@@ -89,7 +89,7 @@ if(status === 'resolved'){return (<>
             </tbody>
         </table>
         <WeatherHourForecast data={listOfHours} forecastDate = {daySet}/>
-        </>
+        </div>
         )
 }}
 

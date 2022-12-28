@@ -1,3 +1,7 @@
+.section__Weather {
+    display: flex;
+    justify-content: center;
+}
 .table_weather,
 .thead_weather,
 .tr_weather,
@@ -10,9 +14,15 @@
 .table_weather  {
     border-radius: 10px;
     border: 2px solid black;
+    transform: scale(0.9);
 }
 .thead_weather{
     column-gap: 2px;
+    background-color: rgb(22, 104, 107);
+    color:aliceblue;
+}
+.tr_weather > th{
+    padding: 2px 4px;
 }
 td.description,
 th.description {
@@ -27,14 +37,16 @@ svg{
     font-weight: 700;
     font-family:Arial, Helvetica, sans-serif;
     font-style:inherit;
-    padding-bottom: 10px;
+    padding: 10px 0;
 }
 .tr_weather:nth-child(even) :hover {
-    border: 2px solid rgb(242, 234, 243);
+    background-color: rgb(242, 234, 243);
+    color: green;
     cursor: pointer;
 }
 .tr_weather:nth-child(odd) :hover {
-    border: 2px solid #6e7070;
+    background-color: #bcc1c1;
+    color: black;
     cursor: pointer;
 }
 .tr_weather:nth-child(even) {

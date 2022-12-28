@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Busshadule770 } from "../Busshadule/Busshadule770";
+import { Busshadule770 } from "components/Busshadule/Busshadule770";
 import css from './Filter.module.css';
 
 export const Filter770bus = () => {

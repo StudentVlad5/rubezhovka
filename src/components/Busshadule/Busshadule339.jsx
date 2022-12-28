@@ -1,4 +1,4 @@
-import bus339 from "../../json/data_bus_339.json";
+import bus339 from "json/data_bus_339.json";
 import css from './Busshadule.module.css';
 
 export const Busshadule339 = ({day,startOfWay}) => {

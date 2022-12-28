@@ -11,5 +11,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: bisque;
+    padding: 10px 0;
 }
 
+.NavContainer a {
+    text-align: center;
+}

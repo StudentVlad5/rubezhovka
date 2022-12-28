@@ -15,7 +15,7 @@
     column-gap: 2px;
 }
 .title_servises{
-    font-size: 20px;
+    font-size: 28px;
     font-weight: 700;
     font-family:Arial, Helvetica, sans-serif;
     font-style:inherit;
@@ -27,6 +27,7 @@
   }
 .tr_servises td {
     text-align: center;
+    padding: 5px;
     border: 1px solid grey;
 }
 .section__servises{
@@ -35,10 +36,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 10px 10px;
+    padding-bottom: 10px;
 }
 .labelTable__servises {
-    font-size: 16px;
+    font-size: 24px;
     padding: 0 10px;
     font-weight: 600;
 }
@@ -52,8 +53,40 @@
     font-size: 14px;
     }
 }
+.select__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 .select__container__servises{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
+.select__container__servises {
+    display: flex;
+    justify-content: center;
+    background-color: bisque;
+}
+.select__container__servises select {
+    background-color: #0563af;
+    color: white;
+    padding: 4px;
+    width: 250px;
+    border: none;
+    font-size: 20px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    -webkit-appearance: button;
+    appearance: button;
+    outline: none;
+    border-radius: 8px;
+  }
+
+  .select__container__servises:hover::before {
+    color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .select__container__servises select option {
+    padding: 30px;
+  }
+  

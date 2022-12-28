@@ -32,7 +32,7 @@ export const Goods = () => {
 
 
     return (
-        <section>
+        <section style={{width:'100%'}}>
                 <section className={css.section__goods}>
                     <div className={css.select__container__goods}>
                         <label className={css.labelTable_goods}>Обрати послугу,товар

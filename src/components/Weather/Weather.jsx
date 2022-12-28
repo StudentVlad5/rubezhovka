@@ -70,7 +70,7 @@ if(status === 'resolved'){return (<div className={css.section__Weather}>
             <tbody>
                 {list.days.map(item => 
                     <tr className={css.tr_weather} key={item.datetime} onClick={(e)=>openModalWindow(e, item.hours)} data-setday={item.datetime}>
-                    <td className={css.datetime}>{item.datetime.slice(-2)+item.datetime.slice(4,8)+item.datetime.slice(0,4)}</td>  
+                    <td className={css.datetime} style={{padding:'0 5px'}}>{item.datetime.slice(-2)+item.datetime.slice(4,8)+item.datetime.slice(0,4)}</td>  
                     <td>{item.tempmax}</td>
                     <td>{item.tempmin}</td>
                     <td>{item.temp}</td>

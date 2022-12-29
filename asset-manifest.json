@@ -1,35 +1,13 @@
 {
   "files": {
-    "main.css": "/rubezhovka/static/css/main.051176e7.css",
-    "main.js": "/rubezhovka/static/js/main.eac0c784.js",
-    "static/media/snow-showers-day.svg": "/rubezhovka/static/media/snow-showers-day.d219b72d17e17cbce417bd5597646d04.svg",
-    "static/media/snow-showers-night.svg": "/rubezhovka/static/media/snow-showers-night.732a57002dce98fe396f426802733add.svg",
-    "static/media/rain-snow-showers-day.svg": "/rubezhovka/static/media/rain-snow-showers-day.b9734e205daec1628c2b6a0915c5a4b0.svg",
-    "static/media/snow.svg": "/rubezhovka/static/media/snow.addc1e8351b15d18b7bbaa1ab096d8bf.svg",
-    "static/media/rain-snow-showers-night.svg": "/rubezhovka/static/media/rain-snow-showers-night.1b86343992084b4a68782f05bd51e987.svg",
-    "static/media/rain-snow.svg": "/rubezhovka/static/media/rain-snow.c87aeec760927f1ee555be928040002a.svg",
-    "static/media/showers-day.svg": "/rubezhovka/static/media/showers-day.1875d48e5b401946171fb9ef0dc5f4ef.svg",
-    "static/media/thunder-showers-day.svg": "/rubezhovka/static/media/thunder-showers-day.e5fb3f4bf7865f11b7fd27c437c17f8e.svg",
-    "static/media/hail.svg": "/rubezhovka/static/media/hail.16d1d890c1fd70c7961c29326bfd6dae.svg",
-    "static/media/partly-cloudy-day.svg": "/rubezhovka/static/media/partly-cloudy-day.2f25a96172e6e967c3592915ec62f12b.svg",
-    "static/media/sleet.svg": "/rubezhovka/static/media/sleet.0d240fe3a6eb4c822031c9978363ae9a.svg",
-    "static/media/showers-night.svg": "/rubezhovka/static/media/showers-night.9a211502a3873a9ffbbd6401f2180f82.svg",
-    "static/media/thunder-showers-night.svg": "/rubezhovka/static/media/thunder-showers-night.519367db791426b4585c45e006dc9f75.svg",
-    "static/media/rain.svg": "/rubezhovka/static/media/rain.1f3928ecc65fd5c7c058b1ba23f8d85d.svg",
-    "static/media/thunder-rain.svg": "/rubezhovka/static/media/thunder-rain.2e9ae693dee5fdda6831cb94d16f0608.svg",
-    "static/media/clear-day.svg": "/rubezhovka/static/media/clear-day.41dfabd0c7568b07d40006eb5383b227.svg",
-    "static/media/fog.svg": "/rubezhovka/static/media/fog.cdb34500c878ffef039ce53cb2c6b1df.svg",
-    "static/media/partly-cloudy-night.svg": "/rubezhovka/static/media/partly-cloudy-night.173fae26cc0bdb5b2eed109b5d3f56ae.svg",
-    "static/media/wind.svg": "/rubezhovka/static/media/wind.5195e076b638f307f8947496c7043d5d.svg",
-    "static/media/thunder.svg": "/rubezhovka/static/media/thunder.1f9fd4d2ee82c4c1e58c4c6a9895bd9c.svg",
+    "main.css": "/rubezhovka/static/css/main.132ffbf6.css",
+    "main.js": "/rubezhovka/static/js/main.adcc5ef8.js",
     "index.html": "/rubezhovka/index.html",
-    "static/media/cloudy.svg": "/rubezhovka/static/media/cloudy.9f58273146466ca7034fbb64aae16c2e.svg",
-    "static/media/clear-night.svg": "/rubezhovka/static/media/clear-night.915669c60fdc91ebc9dc246edebe046d.svg",
-    "main.051176e7.css.map": "/rubezhovka/static/css/main.051176e7.css.map",
-    "main.eac0c784.js.map": "/rubezhovka/static/js/main.eac0c784.js.map"
+    "main.132ffbf6.css.map": "/rubezhovka/static/css/main.132ffbf6.css.map",
+    "main.adcc5ef8.js.map": "/rubezhovka/static/js/main.adcc5ef8.js.map"
   },
   "entrypoints": [
-    "static/css/main.051176e7.css",
-    "static/js/main.eac0c784.js"
+    "static/css/main.132ffbf6.css",
+    "static/js/main.adcc5ef8.js"
   ]
 }

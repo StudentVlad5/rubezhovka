@@ -63,6 +63,7 @@
     flex-wrap: wrap;
     justify-content: center;
     background-color: bisque;
+    min-width: 100%;
 }
 .select__container__goods select {
     background-color: #0563af;
@@ -84,4 +85,9 @@
   }
   .select__container__goods select option {
     padding: 30px;
+  }
+  a {
+    text-decoration: none;
+    font-size: 14px;
+    color:goldenrod;
   }

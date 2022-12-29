@@ -32,8 +32,8 @@ export const WeatherHourForecast = ({data = [], forecastDate = "2022-12-24"}) =>
                 <td>{Math.round(key.cloudcover, 0)}</td>
                 <td>{Math.round(key.visibility, 0)}</td>
                 <td>{key.solarenergy}</td>
-                <td>{key.conditions}</td>
-                <td>{<WeatherIcon perem={key.icon}/>}</td>
+                <td className={css.conditions}>{key.conditions}</td>
+                <td className={css.img}>{WeatherIcon(key.icon)}</td>
                 </tr>
                 )              
                 }

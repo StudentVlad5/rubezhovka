@@ -44,3 +44,10 @@
     text-align: center;
     border: 1px solid grey;
 }
+.img img{
+    max-width: 30px;
+    max-height: 25px;
+}
+.conditions {
+    min-width: 100px;
+}

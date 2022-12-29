@@ -84,7 +84,7 @@ if(status === 'resolved'){return (<div className={css.section__Weather}>
                     <td>{item.sunrise}</td>
                     <td>{item.sunset}</td>
                     <td className={css.description}>{item.description}</td>
-                    <td>{<WeatherIcon perem={item.icon}/>}</td>
+                    <td>{WeatherIcon(item.icon)}</td>
                     </tr>)}
             </tbody>
         </table>

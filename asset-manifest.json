@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/rubezhovka/static/css/main.132ffbf6.css",
-    "main.js": "/rubezhovka/static/js/main.adcc5ef8.js",
+    "main.css": "/rubezhovka/static/css/main.7d557f75.css",
+    "main.js": "/rubezhovka/static/js/main.a5f23186.js",
     "index.html": "/rubezhovka/index.html",
-    "main.132ffbf6.css.map": "/rubezhovka/static/css/main.132ffbf6.css.map",
-    "main.adcc5ef8.js.map": "/rubezhovka/static/js/main.adcc5ef8.js.map"
+    "main.7d557f75.css.map": "/rubezhovka/static/css/main.7d557f75.css.map",
+    "main.a5f23186.js.map": "/rubezhovka/static/js/main.a5f23186.js.map"
   },
   "entrypoints": [
-    "static/css/main.132ffbf6.css",
-    "static/js/main.adcc5ef8.js"
+    "static/css/main.7d557f75.css",
+    "static/js/main.a5f23186.js"
   ]
 }

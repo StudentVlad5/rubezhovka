@@ -16,3 +16,24 @@ h3 {
     text-align: center;
     color: white;
 }
+.leftArrow>svg {
+    margin-top: 10px;
+    width: 40px;
+    height: 40px;
+    fill: white;
+}
+#menu-bar.hide-bar {
+    position: absolute;
+    display: none;
+    top: -100;
+    left: -100;
+  }
+  .rightArrow>svg {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 40px;
+    height: 40px;
+    fill: black
+
+  }

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { PhoneTwoTone } from '@ant-design/icons';
 import goods from 'json/goods.json';
 import css from './Goodsa.module.css';
 
@@ -35,20 +36,20 @@ export const Goods = () => {
         <section style={{width:'100%'}}>
                 <section className={css.section__goods}>
                     <div className={css.select__container__goods}>
-                        <label className={css.labelTable_goods}>Обрати послугу,товар
-                            <select name="goods_name" id="goods_name" onChange={(e)=>setSearchGoods(e.target.value)}>
+                        <label className={css.labelTable_goods}>Обрати товар
+                            <select className={css.select_goods} id="goods_name" onChange={(e)=>setSearchGoods(e.target.value)}>
                             <option value="">-Вeсь перелік-</option>
                             {listOfGoodsUniq.map(item => <option value={item} key={item}>{item}</option>)}
                             </select>
                         </label>
                         <label className={css.labelTable_goods}>Назва продукту
-                            <select name="goods_name" id="goods_name" onChange={(e)=>setSearchGoodsDetails(e.target.value)}>
+                            <select className={css.select_goods}  id="goods_name" onChange={(e)=>setSearchGoodsDetails(e.target.value)}>
                             <option value="">-Вeсь перелік-</option>
                             {listOfGoodsDetailsUniq.map(item => <option value={item} key={item}>{item}</option>)}
                             </select>
                         </label>
                         <label className={css.labelTable_goods}>Локація
-                            <select name="goods_name" id="goods_name" onChange={(e)=>setSearchPlace(e.target.value)}>
+                            <select className={css.select_goods} id="goods_name" onChange={(e)=>setSearchPlace(e.target.value)}>
                             <option value="">-Вeсь перелік-</option>
                             {listOfPlaceUniq.map(item => <option value={item} key={item}>{item}</option>)}
                             </select>
@@ -57,7 +58,7 @@ export const Goods = () => {
                 </section>
             <section className={css.select__container}>
             <table className={css.table_goods}>
-                <caption className={css.title_goods}>Перелік місцевих послуг/товарів </caption>
+                <caption className={css.title_goods}>Перелік товарів </caption>
                 <thead className={css.thead_goods}>
                     <tr className={css.tr_goods}>
                         <th>Товар</th>
@@ -69,13 +70,12 @@ export const Goods = () => {
                 </thead>
                 <tbody>
                     {copyGoods.map(item => 
-                        <tr className={css.tr_goods} key={item.id}>
+                        <><tr className={css.tr_goods} key={item.id}>
                             <td>{item.tools}</td>
                             <td>{item.tools_detail}</td>
                             <td>{item.name}</td>
-                            <td><a href="tel:{item.phone}">{item.phone}</a></td>
-                            <td>{item.place}</td>
-                        </tr>)}
+                            <td><a href={`tel:${item.phone}`}>{item.phone}<PhoneTwoTone style={{ paddingLeft: '4px' }} /></a></td><td>{item.place}</td>
+                        </tr></>)}
                 </tbody>
                 </table>
             </section>

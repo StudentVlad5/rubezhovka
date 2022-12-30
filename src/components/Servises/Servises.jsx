@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { PhoneTwoTone } from '@ant-design/icons';
 import servises from 'json/servises.json';
 import css from './Servises.module.css';
 
@@ -35,13 +36,13 @@ export const Servises = () => {
         <section style={{width:'100%'}}>
                 <section className={css.section__servises}>
                     <div className={css.select__container__servises}>
-                        <label className={css.labelTable__servises}>Обрати послугу,товар
+                        <label className={css.labelTable__servises}>Обрати послугу
                             <select name="servises_name" id="servises_name" onChange={(e)=>setSearchServises(e.target.value)}>
                             <option value="">-Вeсь перелік-</option>
                             {listOfServisesUniq.map(item => <option value={item} key={item}>{item}</option>)}
                             </select>
                         </label>
-                        <label className={css.labelTable__servises}>Назва продукту
+                        <label className={css.labelTable__servises}>Назва сервісу
                             <select name="servises_name" id="servises_name" onChange={(e)=>setSearchServisesDetails(e.target.value)}>
                             <option value="">-Вeсь перелік-</option>
                             {listOfServisesDetailsUniq.map(item => <option value={item} key={item}>{item}</option>)}
@@ -57,7 +58,7 @@ export const Servises = () => {
                 </section>
             <section className={css.select__container}>
             <table className={css.table_servises}>
-                <caption className={css.title_servises}>Перелік місцевих послуг/товарів </caption>
+                <caption className={css.title_servises}>Перелік послуг</caption>
                 <thead className={css.thead_servises}>
                     <tr className={css.tr_servises}>
                         <th>Послуга</th>
@@ -73,7 +74,7 @@ export const Servises = () => {
                             <td>{item.tools}</td>
                             <td>{item.tools_detail}</td>
                             <td>{item.name}</td>
-                            <td><a href="tel:{item.phone}">{item.phone}</a></td>
+                            <td><a href={`tel:${item.phone}`}>{item.phone}<PhoneTwoTone style={{paddingLeft:'4px'}}/></a></td>
                             <td>{item.place}</td>
                         </tr>)}
                 </tbody>

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Audio } from 'react-loader-spinner';
 import  { WeatherIcon } from "components/Itemicon/Itemicon";
 import { WeatherHourForecast } from "components/WeatherHourForecast/WeatherHourForecast";
 import  css  from "./Weather.module.css";
@@ -44,6 +45,16 @@ function openModalWindow (e, item) {
     setListOfHours(item.map(item=>item))
     console.log(daySet, listOfHours);
 } 
+if(status === 'pending') {  return(  
+<Audio
+    height="80"
+    width="80"
+    radius="9"
+    color="blue"
+    ariaLabel="loading"
+    wrapperStyle
+    wrapperClass
+/>)}
 
 if(status === 'resolved'){return (<div className={css.section__Weather}>
         <table className={css.table_weather}>

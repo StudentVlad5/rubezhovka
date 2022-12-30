@@ -15,7 +15,7 @@
     column-gap: 2px;
 }
 .title_servises{
-    font-size: 28px;
+    font-size: 16px;
     font-weight: 700;
     font-family:Arial, Helvetica, sans-serif;
     font-style:inherit;
@@ -39,19 +39,11 @@
     padding-bottom: 10px;
 }
 .labelTable__servises {
-    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
     padding: 0 10px;
     font-weight: 600;
-}
-@media screen and (max-width: 319.9px) {
-    .labelTable__servises{
-    font-size: 10px;
-    }
-}
-@media screen and (min-width: 320px) and (max-width: 480px) {
-    .labelTable__servises{
-    font-size: 14px;
-    }
 }
 .select__container {
     display: flex;
@@ -62,12 +54,17 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    background-color: bisque;
     min-width: 100%;
+    align-items: center;
+    flex-direction: column;
 }
 .select__container__servises {
     display: flex;
     justify-content: center;
     background-color: bisque;
+    align-items: center;
+    flex-direction: column;
 }
 .select__container__servises select {
     background-color: #0563af;
@@ -75,7 +72,7 @@
     padding: 4px;
     width: 250px;
     border: none;
-    font-size: 20px;
+    font-size: 16px;
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
     -webkit-appearance: button;
     appearance: button;
@@ -95,3 +92,33 @@
     font-size: 14px;
     color:goldenrod;
   }
+  @media screen and (max-width: 319.9px) {
+    .labelTable_servises {
+        display: flex;
+        text-align: center;
+        font-size: 10px;
+        padding-left: 20px;
+        padding-bottom: 0;
+        margin: 0;
+        flex-direction: column;
+    }
+    .select__container__servises select {
+        font-size: 10px; 
+        max-width: 200px;
+    }
+}
+@media screen and (min-width: 320px) and (max-width: 540px) {
+    .labelTable_servises {
+        display: flex;
+        text-align: center;
+        font-size: 14px;
+        padding-left: 20px;
+        padding-bottom: 0;
+        margin: 0;
+        flex-direction: column;
+    }
+    .select__container__servises select {
+        font-size: 14px; 
+        max-width: 200px;
+    }
+}

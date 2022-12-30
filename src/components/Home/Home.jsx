@@ -1,9 +1,9 @@
 import { Outlet} from "react-router-dom";
+import { useState } from "react";
 import { NavMenu } from 'components/Common/Common';
-// import { StarOutlined, StarFilled, StarTwoTone, WhatsAppOutlined } from '@ant-design/icons';
+import { Footer } from 'components/Footer/Footer'
 import { LeftCircleOutlined, RightCircleOutlined } from '@ant-design/icons';
 import css from "./Home.module.css";
-import { useState } from "react";
 
 export const Home = () => {
 const [statusMenu, setStatusMenu] = useState(false);
@@ -26,6 +26,7 @@ const  handleViewBar = () => {
             {NavMenu("weather", <h5>Погода</h5>)}
             {NavMenu("goods", <h5>Товари</h5>)}
             {NavMenu("servises", <h5>Послуги</h5>)}
+            <Footer/>
         </div>
         <Outlet/>
     </>)

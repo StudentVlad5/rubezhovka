@@ -51,3 +51,8 @@
 .conditions {
     min-width: 100px;
 }
+@media screen and (max-width: 540px) {
+    .invisible_smallscreen {
+        display: none;
+    }
+}

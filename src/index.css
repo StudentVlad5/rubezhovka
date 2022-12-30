@@ -30,3 +30,7 @@ code {
 #popup-root.is-hide{
   display: none
 }
+p {
+  margin: 0;
+  padding: 0;
+}

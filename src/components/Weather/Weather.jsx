@@ -64,16 +64,16 @@ if(status === 'resolved'){return (<div className={css.section__Weather}>
                     <th>Дата</th>
                     <th>max t°</th>
                     <th>min t°</th>
-                    <th>середня t°</th>
-                    <th>t° по від-чуттям</th>
+                    <th className={css.invisible_smallscreen}>середня t°</th>
+                    <th className={css.invisible_smallscreen}>t° по від-чуттям</th>
                     <th>волог-кість, %</th>
                     <th>вітер, км/год</th>
-                    <th>тиск, мм рт.ст.</th>
-                    <th>хмар-ність, %</th>
-                    <th>видимість, %</th>
-                    <th>соняч-ність, ЕДж</th>
-                    <th>світанок</th>
-                    <th>захід сонця</th>
+                    <th className={css.invisible_smallscreen}>тиск, мм рт.ст.</th>
+                    <th className={css.invisible_smallscreen}>хмар-ність, %</th>
+                    <th className={css.invisible_smallscreen}>видимість, %</th>
+                    <th className={css.invisible_smallscreen}>соняч-ність, ЕДж</th>
+                    <th className={css.invisible_smallscreen}>світанок</th>
+                    <th className={css.invisible_smallscreen}>захід сонця</th>
                     <th className={css.description}>опис погоди</th>
                     <th>іконка</th>
                 </tr>
@@ -82,18 +82,18 @@ if(status === 'resolved'){return (<div className={css.section__Weather}>
                 {list.days.map(item => 
                     <tr className={css.tr_weather} key={item.datetime} onClick={(e)=>openModalWindow(e, item.hours)} data-setday={item.datetime}>
                     <td className={css.datetime} style={{padding:'0 5px'}}>{item.datetime.slice(-2)+item.datetime.slice(4,8)+item.datetime.slice(0,4)}</td>  
-                    <td>{item.tempmax}</td>
+                    <td >{item.tempmax}</td>
                     <td>{item.tempmin}</td>
-                    <td>{item.temp}</td>
-                    <td>{item.feelslike}</td>
+                    <td className={css.invisible_smallscreen}>{item.temp}</td>
+                    <td className={css.invisible_smallscreen}>{item.feelslike}</td>
                     <td>{Math.round(item.humidity,0)}</td>
                     <td>{item.windspeed}</td>
-                    <td>{Math.round(item.pressure,0)}</td>
-                    <td>{Math.round(item.cloudcover,0)}</td>
-                    <td>{Math.round(item.visibility,0)}</td>
-                    <td>{item.solarenergy}</td>
-                    <td>{item.sunrise}</td>
-                    <td>{item.sunset}</td>
+                    <td className={css.invisible_smallscreen}>{Math.round(item.pressure,0)}</td>
+                    <td className={css.invisible_smallscreen}>{Math.round(item.cloudcover,0)}</td>
+                    <td className={css.invisible_smallscreen}>{Math.round(item.visibility,0)}</td>
+                    <td className={css.invisible_smallscreen}>{item.solarenergy}</td>
+                    <td className={css.invisible_smallscreen}>{item.sunrise}</td>
+                    <td className={css.invisible_smallscreen}>{item.sunset}</td>
                     <td className={css.description}>{item.description}</td>
                     <td>{WeatherIcon(item.icon)}</td>
                     </tr>)}

@@ -9,14 +9,14 @@ export const WeatherHourForecast = ({data = [], forecastDate = "2022-12-24"}) =>
                 <tr className={css.dayForecast__tr}>
                     <th>Година</th>
                     <th>t°</th>
-                    <th>t° по відчуттям</th>
+                    <th className={css.invisible_smallscreen}>t° по відчуттям</th>
                     <th>вологкість, %</th>
                     <th>вітер, км/год</th>
                     <th>тиск, мм рт.ст.</th>
                     <th>хмарність, %</th>
-                    <th>видимість, %</th>
-                    <th>енергія сонця, ЕДж </th>
-                    <th>опис погоди</th>
+                    <th className={css.invisible_smallscreen}>видимість, %</th>
+                    <th className={css.invisible_smallscreen}>енергія сонця, ЕДж </th>
+                    <th className={css.conditions + ' ' + css.invisible_smallscreen}>опис погоди</th>
                     <th>іконка</th>
                 </tr>
             </thead>
@@ -25,14 +25,14 @@ export const WeatherHourForecast = ({data = [], forecastDate = "2022-12-24"}) =>
                 <tr key={key.datetimeEpoch} className={css.dayForecast__tr}>
                 <td>{key.datetime.slice(0, 5)}</td>  
                 <td>{Math.round(key.dew, 0)}</td>
-                <td>{Math.round(key.feelslike, 0)}</td>
+                <td className={css.invisible_smallscreen}>{Math.round(key.feelslike, 0)}</td>
                 <td>{Math.round(key.humidity, 0)}</td>
                 <td>{Math.round(key.windspeed, 1)}</td>
                 <td>{Math.round(key.pressure,0)}</td>
                 <td>{Math.round(key.cloudcover, 0)}</td>
-                <td>{Math.round(key.visibility, 0)}</td>
-                <td>{key.solarenergy}</td>
-                <td className={css.conditions}>{key.conditions}</td>
+                <td className={css.invisible_smallscreen}>{Math.round(key.visibility, 0)}</td>
+                <td className={css.invisible_smallscreen}>{key.solarenergy}</td>
+                <td className={css.conditions + ' ' + css.invisible_smallscreen}>{key.conditions}</td>
                 <td className={css.img}>{WeatherIcon(key.icon)}</td>
                 </tr>
                 )              

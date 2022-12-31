@@ -62,7 +62,6 @@ export const Goods = () => {
                 <thead className={css.thead_goods}>
                     <tr className={css.tr_goods}>
                         <th>Товар</th>
-                        <th>Опис</th>
                         <th>Ціна, грн</th>
                         <th>Контакти</th>
                         <th>Телефон</th>
@@ -72,7 +71,6 @@ export const Goods = () => {
                 <tbody>
                     {copyGoods.map(item => 
                         <><tr className={css.tr_goods} key={item.id}>
-                            <td>{item.tools}</td>
                             <td>{item.tools_detail}</td>
                             <td>{item.price}</td>
                             <td>{item.name}</td>

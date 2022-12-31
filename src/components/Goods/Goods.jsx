@@ -64,9 +64,8 @@ export const Goods = () => {
                         <th>Товар</th>
                         <th>Опис</th>
                         <th>Ціна, грн</th>
-                        <th>Од.вим.</th>
                         <th>Контакти</th>
-                        <th>Контактна особа</th>
+                        <th>Телефон</th>
                         <th>Місце знаходження</th>
                     </tr>
                 </thead>
@@ -76,7 +75,6 @@ export const Goods = () => {
                             <td>{item.tools}</td>
                             <td>{item.tools_detail}</td>
                             <td>{item.price}</td>
-                            <td>{item.value}</td>
                             <td>{item.name}</td>
                             <td><a href={`tel:${item.phone}`}>{item.phone}<PhoneTwoTone style={{ paddingLeft: '4px' }} /></a></td><td>{item.place}</td>
                         </tr></>)}

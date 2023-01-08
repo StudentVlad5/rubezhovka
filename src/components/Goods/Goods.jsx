@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { PhoneTwoTone } from '@ant-design/icons';
 import goods from 'json/goods.json';
 import css from './Goodsa.module.css';
+import iconViber from '../../img/viber.png';
+import iconWhatsUp from '../../img/whatsapp-png-image.png';
 
 export const Goods = () => {
     const[searchGoods,setSearchGoods] = useState('');
@@ -65,7 +67,7 @@ export const Goods = () => {
                         <th>Ціна, грн</th>
                         <th>Контакти</th>
                         <th>Телефон</th>
-                        <th>Місце знаходження</th>
+                        <th>ЧАТ</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -74,7 +76,11 @@ export const Goods = () => {
                             <td>{item.tools_detail}</td>
                             <td>{item.price}</td>
                             <td>{item.name}</td>
-                            <td><a href={`tel:${item.phone}`}>{item.phone}<PhoneTwoTone style={{ paddingLeft: '4px' }} /></a></td><td>{item.place}</td>
+                            <td><a href={`tel:${item.phone}`}>{item.phone}<PhoneTwoTone style={{ paddingLeft: '4px' }} /></a></td>
+                            <td>
+                                <a href={`viber://chat?number=%2B${item.phone}`}><img className={css.chatIcon} src={iconViber} alt="viber"/></a>
+                                <a href={`https://wa.me/${item.phone}`}><img className={css.chatIcon} src={iconWhatsUp} alt="whatsUp"/></a>
+                            </td>
                         </tr></>)}
                 </tbody>
                 </table>

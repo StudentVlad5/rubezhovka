@@ -22,10 +22,10 @@ const  handleViewBar = () => {
         <div className={css.menu} id="menuBar">
             <LeftCircleOutlined className={css.leftArrow} onClick={handleHideBar}/>
             <h3>Михайлівка-Рубежівка</h3>
-            {NavMenu("bus_way_shadule", <h5>Маршрути автобусів</h5>)}
-            {NavMenu("weather", <h5>Погода</h5>)}
-            {NavMenu("goods", <h5>Товари</h5>)}
-            {NavMenu("servises", <h5>Послуги</h5>)}
+            {NavMenu("bus_way_shadule", 'Маршрути автобусів')}
+            {NavMenu("weather", 'Погода')}
+            {NavMenu("goods", 'Товари')}
+            {NavMenu("servises", 'Послуги')}
             <Footer/>
         </div>
         <Outlet/>

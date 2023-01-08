@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { PhoneTwoTone } from '@ant-design/icons';
 import servises from 'json/servises.json';
 import css from './Servises.module.css';
+import iconViber from '../../img/viber.png';
+import iconWhatsUp from '../../img/whatsapp-png-image.png';
 
 export const Servises = () => {
     const[searchServises,setSearchServises] = useState('');
@@ -61,21 +63,22 @@ export const Servises = () => {
                 <caption className={css.title_servises}>Перелік послуг</caption>
                 <thead className={css.thead_servises}>
                     <tr className={css.tr_servises}>
-                        <th>Послуга</th>
                         <th>Опис</th>
-                        <th>Контакти</th>
                         <th>Контактна особа</th>
-                        <th>Місце знаходження</th>
+                        <th>Контакти</th>
+                        <th>ЧАТ</th>
                     </tr>
                 </thead>
                 <tbody>
                     {copyServises.map(item => 
                         <tr className={css.tr_servises} key={item.id}>
-                            <td>{item.tools}</td>
                             <td>{item.tools_detail}</td>
                             <td>{item.name}</td>
                             <td><a href={`tel:${item.phone}`}>{item.phone}<PhoneTwoTone style={{paddingLeft:'4px'}}/></a></td>
-                            <td>{item.place}</td>
+                            <td>
+                                <a href={`viber://chat?number=%2B${item.phone}`}><img className={css.chatIcon} src={iconViber} alt="viber"/></a>
+                                <a href={`https://wa.me/${item.phone}`}><img className={css.chatIcon} src={iconWhatsUp} alt="whatsUp"/></a>
+                            </td>
                         </tr>)}
                 </tbody>
                 </table>

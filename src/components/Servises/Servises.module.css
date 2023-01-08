@@ -122,3 +122,8 @@
         max-width: 200px;
     }
 }
+.chatIcon{
+    width: 20px;
+    height: 20px;
+    padding: 3px;
+}

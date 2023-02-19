@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/rubezhovka/static/css/main.b6a9a67d.css",
-    "main.js": "/rubezhovka/static/js/main.f23dab66.js",
+    "main.js": "/rubezhovka/static/js/main.9d643f7e.js",
     "static/media/viber.png": "/rubezhovka/static/media/viber.61dd0730b47c7a3e5056.png",
     "static/media/heart.png": "/rubezhovka/static/media/heart.a409bf56d8d440005c39.png",
     "static/media/whatsapp-png-image.png": "/rubezhovka/static/media/whatsapp-png-image.df7ba82dfa8317f14421.png",
     "index.html": "/rubezhovka/index.html",
     "main.b6a9a67d.css.map": "/rubezhovka/static/css/main.b6a9a67d.css.map",
-    "main.f23dab66.js.map": "/rubezhovka/static/js/main.f23dab66.js.map"
+    "main.9d643f7e.js.map": "/rubezhovka/static/js/main.9d643f7e.js.map"
   },
   "entrypoints": [
     "static/css/main.b6a9a67d.css",
-    "static/js/main.f23dab66.js"
+    "static/js/main.9d643f7e.js"
   ]
 }
